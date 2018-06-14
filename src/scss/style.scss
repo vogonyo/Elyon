@@ -14,7 +14,7 @@ html {
   body{
     overflow-x: hidden;
   }
-  
+
   /*navbar styling start*/
   .navbar{
     .navbar-nav{
@@ -37,8 +37,14 @@ html {
       padding: 0 15px 0 15px;
     }
     .badge{
-      border-radius: 50%;
-      font-size: 23px;
+      border-radius: 100%;
+     font-size: 19px;
+     height: 40px;
+     width: 40px;
+     line-height: 26px;
+    }
+    .nav-link .active{
+      border-bottom: 2px solid $yellow;
     }
   }
   /*navbar styling start*/
@@ -71,11 +77,11 @@ html {
   font-size: 22px;
   font-weight: 400;
   color:$secondary;
-  } 
+  }
   .header-sub-content2{
     text-align: center;
   }
-  
+
   .header-content-btn{
      color: $yellow;
      width: 280px;
@@ -105,7 +111,7 @@ html {
     border: 1px solid $primary;
     z-index: 1;
   }
-  
+
   #services {
     .header1{
       color: #1b75ba;
@@ -135,16 +141,16 @@ html {
     }
     .service-item1{
       background: #075d74;
-    }	
+    }
     .card-body{
       margin-left: 51px;
       padding: 71px;
       color: #fff;
-    }	
-    
+    }
+
     .card-body img{
-      height: 100px;	
-    
+      height: 100px;
+
     }
     .card-body h4{
       font-weight: 650;
@@ -153,13 +159,15 @@ html {
       margin-right: -7px;
     }
   }
-  
+
   /*services end*/
 
   /*Product-section styling*/
   #featured-products{
     background-color: rgb(230, 230, 230);
-    
+    .card:hover{
+      border: 1px solid $primary;
+    }
   }
   .featured-products{
     font-weight: 700;
@@ -184,9 +192,10 @@ html {
   }
   .add-to-cart:hover{
     background-color: $primary;
-    .card-body{
-      border: 4px solid $primary;
-    }
+    transition:ease-out 0.3s ;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
   }
   .product-id{
     font-family: 'Poppins', sans-serif;
@@ -209,6 +218,9 @@ html {
     bottom: 0;
   }
    /*cards styling*/
+   #how-we-work{
+     text-align: center;
+   }
    .how-we-work{
      font-weight: 700;
      font-family: 'Poppins', sans-serif;
@@ -225,12 +237,12 @@ html {
      left: 40%;
      z-index: 1;
    }
- 
+
    .how-we-work-content{
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-size: 15px;
-    
+
    }
    .card-content-header{
     font-family: 'Poppins', sans-serif;
@@ -267,42 +279,40 @@ html {
     font-size: 20px;
    }
 
-   #subscribe { 
-     .sign-up-text{
-       font-weight: 600;
-       font-family: 'Poppins', sans-serif;
-       font-size: 24px;
-       color: $yellow;
-     } 
-     .search_wrapper{
-      position:relative;
-      width:400px;
-      height:40px;
-     }
-    .subscribe-input {
-      // margin-left:40px;
-      height:40px;
-      width:350px;
-      padding: 30px;
-      top:inherit;
-      right:inherit;
+   /*SUBSCRIBE*/
+
+#subscribe{
+  font-family: 'Poppins', sans-serif;
+	background: #1b75ba;
+	padding: 12px;
+	text-align: center;
+  form{
+    text-align: center;
+    margin-bottom: 0px;
   }
-  
-   .subscribe-btn{
-      position:absolute;
-      top:0;
-      right:0;
-      width:180px;
-      height:40px;
-      padding: 30px;
-      background-color: $yellow;
-      text-transform: uppercase;
-     
-   }
-   .subscribe-btn span{
-     text-align: center;
-   }
- }
+  .btn {
+    padding: 10px 50px 10px 50px;
+    background-color: $yellow;
+    color: $primary;
+    font-weight: 700;
+    font-size: 23px;
+    height: 56px;
+  }
+  label{
+    height: 120px;
+    margin-right: 30px;
+    color: $yellow;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  input{
+    padding-left: 30px;
+    height: 56px;
+    width: 219px;
+  }
+
+}
+/*subscribe*/
 
  .read-more-btn{
    color: $yellow;
@@ -326,7 +336,7 @@ html {
  .quick-links{
   font-family: 'Raleway', sans-serif;
    text-decoration: none;
-   
+
    color: #fff;
  }
  .quick-links2{
@@ -354,4 +364,14 @@ html {
   float: right;
   padding: 12px;
   border: 1px solid #fff;
-  border
+  border-radius: 100%;
+  margin-left: 17px;
+  background-color: #fff;
+  color: $primary;
+}
+
+.social-media-icons{
+  margin-left: -7px;
+  display: flex;
+  margin-top: 12px;
+}
